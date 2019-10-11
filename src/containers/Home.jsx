@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Header from '../components/Header';
 import Search from '../components/Search';
 import Categories from '../components/Categories';
@@ -11,7 +11,7 @@ import '../assets/styles/App.scss';
 
 const API = 'http://localhost:3000/initialState/'
 
-const App = () => {
+const Home = () => {
   const initialState = useInitialState(API);
   return (
     <div className='App'>
@@ -41,4 +41,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
