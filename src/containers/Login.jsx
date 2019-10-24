@@ -1,8 +1,7 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/jsx-one-expression-per-line */
+/* eslint-disable eol-last */
 /* eslint-disable react/button-has-type */
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
@@ -17,7 +16,7 @@ const Login = (props) => {
     email: '',
   });
 
-  const handleInput = (event) => {
+  const handInput = (event) => {
     setValues({
       ...form,
       [event.target.name]: event.target.value,
@@ -40,29 +39,28 @@ const Login = (props) => {
             className='input'
             type='text'
             placeholder='Correo'
-            onChange={handleInput}
+            onChange={handInput}
           />
           <input
             name='password'
             className='input'
             type='password'
             placeholder='Contraseña'
-            onChange={handleInput}
+            onChange={handInput}
           />
           <button className='button'>Iniciar sesión</button>
           <div className='login__container--remember-me'>
             <label>
-              <input type='checkbox' id='cbox1' value='first_checkbox' />Recuérdame
+              <input type='checkbox' id='cbox1' value='first_checkbox' /> Recuérdame
             </label>
             <a href='/'>Olvidé mi contraseña</a>
           </div>
         </form>
         <section className='login__container--social-media'>
-          <div><img src={googleIcon} /> Inicia sesión con Google</div>
-          <div><img src={twitterIcon} /> Inicia sesión con Twitter</div>
+          <div><img src={googleIcon} alt='Inicia sesión con Google' /> Inicia sesión con Google</div>
+          <div><img src={twitterIcon} alt='Inicia sesión con Twitter' /> Inicia sesión con Twitter</div>
         </section>
-        <p className='login__container--register'>
-          No tienes ninguna cuenta
+        <p className='login__container--register'>No tienes ninguna cuenta
           <Link to='/register'>
             Regístrate
           </Link>
@@ -72,9 +70,8 @@ const Login = (props) => {
   );
 };
 
-const mapDispatchProps = {
+const mapDispatchToProps = {
   loginRequest,
 };
 
-export default connect(null, mapDispatchProps)(Login);
-
+export default connect(null, mapDispatchToProps)(Login);
