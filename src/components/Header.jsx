@@ -32,7 +32,7 @@ const Header = (props) => {
 
           {hasUser ?
             <li><a href='#logout' onClick={handleLogout}>Cerrar sesion</a></li> :
-            <li><Link to='/login'>Iniciar Sesión</Link></li>}
+            <li><Link to='/login'>Iniciar Sesi ón</Link></li>}
         </ul>
       </div>
     </header>
